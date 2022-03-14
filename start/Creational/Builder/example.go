@@ -15,7 +15,7 @@ func main()  {
 	// TODO:Use the build function to create a finished object
 	notif, err := bldr.Build()
 	if err != nil {
-		fmt.Println("error occurred while building notification")
+		fmt.Println("error occurred while building notification", err)
 	} else {
 		fmt.Printf("succefully built %+v", notif)
 	}
