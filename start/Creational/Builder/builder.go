@@ -45,10 +45,10 @@ func (nb *NotificationBuilder) SetType(notType string) {
 func (nb *NotificationBuilder) Build() (*Notification, error) {
 	// TODO: Error checking can be done in the build stage
 	if nb.Icon != "" && nb.Subtitle == "" {
-		return nil, fmt.Errorf("You must specify a title when using an icon")
+		return nil, fmt.Errorf("you must specify a title when using an icon")
 	}
 	if nb.Priority > 5 {
-		return nil, fmt.Errorf("Priority must not be greater than 5")
+		return nil, fmt.Errorf("priority must not be greater than 5")
 	}
 
 	// TODO: Returns a newly created notification object
